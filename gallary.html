@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  
+
+<section id="gallery-section" style="padding: 60px 20px; background: #fff;" data-aos="fade">
+    <div style="max-width: 1200px; margin: auto;">
+      <!-- Section Title -->
+      <div style="text-align: center; margin-bottom: 20px;">
+        <h2 style="font-size: 2rem; margin-bottom: 10px; color: #fd7e14;">Gallery</h2>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div style="display: flex; justify-content: center; flex-wrap: wrap; margin-bottom: 30px;">
+        <button
+          style="margin: 5px; padding: 8px 15px; background-color: #007bff; color: #fff; border: none; border-radius: 4px; cursor: pointer;"
+          class="filter-btn active" data-filter="*">All</button>
+        <button
+          style="margin: 5px; padding: 8px 15px; background-color: #007bff; color: #fff; border: none; border-radius: 4px; cursor: pointer;"
+          class="filter-btn" data-filter=".web">Events</button>
+        <button
+          style="margin: 5px; padding: 8px 15px; background-color: #007bff; color: #fff; border: none; border-radius: 4px; cursor: pointer;"
+          class="filter-btn" data-filter=".design">Party</button>
+        <button
+          style="margin: 5px; padding: 8px 15px; background-color: #007bff; color: #fff; border: none; border-radius: 4px; cursor: pointer;"
+          class="filter-btn" data-filter=".brand">Holidays</button>
+      </div>
+
+      <!-- Gallery Items -->
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+        <!-- Example gallery item -->
+        <div class="gallery-item web" style="width: calc(25% - 10px); min-width: 150px; position: relative;">
+          <a href="/static/images/img_1.jpg" class="item-wrap fancybox" style="display: block; position: relative;">
+            <span
+              style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 2rem; color: rgba(255,255,255,0.8); z-index: 2;"><i
+                class="fas"></i></span>
+            <img src="/static/images/img_1.jpg" alt="Gallery Image" style="width: 100%; border-radius: 8px; display: block;">
+          </a>
+        </div>
+        <div class="gallery-item design" style="width: calc(25% - 10px); min-width: 150px; position: relative;">
+          <a href="/static/images/img_2.jpg" class="item-wrap fancybox" style="display: block; position: relative;">
+            <span
+              style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 2rem; color: rgba(255,255,255,0.8); z-index: 2;"><i
+                class="fas"></i></span>
+            <img src="/static/images/img_2.jpg" alt="Gallery Image" style="width: 100%; border-radius: 8px; display: block;">
+          </a>
+        </div>
+        <div class="gallery-item brand" style="width: calc(25% - 10px); min-width: 150px; position: relative;">
+          <a href="/static/images/img_3.jpg" class="item-wrap fancybox" style="display: block; position: relative;">
+            <span
+              style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 2rem; color: rgba(255,255,255,0.8); z-index: 2;"><i
+                class="fas"></i></span>
+            <img src="/static/images/img_3.jpg" alt="Gallery Image" style="width: 100%; border-radius: 8px; display: block;">
+          </a>
+        </div>
+        <div class="gallery-item web" style="width: calc(25% - 10px); min-width: 150px; position: relative;">
+          <a href="/static/images/img_4.jpg" class="item-wrap fancybox" style="display: block; position: relative;">
+            <span
+              style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 2rem; color: rgba(255,255,255,0.8); z-index: 2;"><i
+                class="fas"></i></span>
+            <img src="/static/images/img_4.jpg" alt="Gallery Image" style="width: 100%; border-radius: 8px; display: block;">
+          </a>
+        </div>
+        <div class="gallery-item design" style="width: calc(25% - 10px); min-width: 150px; position: relative;">
+          <a href="/static/images/img_5.jpg" class="item-wrap fancybox" style="display: block; position: relative;">
+            <span
+              style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 2rem; color: rgba(255,255,255,0.8); z-index: 2;"><i
+                class="fas"></i></span>
+            <img src="/static/images/img_5.jpg" alt="Gallery Image" style="width: 100%; border-radius: 8px; display: block;">
+          </a>
+        </div>
+        <div class="gallery-item design" style="width: calc(25% - 10px); min-width: 150px; position: relative;">
+          <a href="/static/images/img_5.jpg" class="item-wrap fancybox" style="display: block; position: relative;">
+            <span
+              style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 2rem; color: rgba(255,255,255,0.8); z-index: 2;"><i
+                class="fas"></i></span>
+            <img src="/static/images/img_5.jpg" alt="Gallery Image" style="width: 100%; border-radius: 8px; display: block;">
+          </a>
+        </div>
+        <div class="gallery-item design" style="width: calc(25% - 10px); min-width: 150px; position: relative;">
+          <a href="/static/images/img_5.jpg" class="item-wrap fancybox" style="display: block; position: relative;">
+            <span
+              style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 2rem; color: rgba(255,255,255,0.8); z-index: 2;"><i
+                class="fas"></i></span>
+            <img src="/static/images/img_5.jpg" alt="Gallery Image" style="width: 100%; border-radius: 8px; display: block;">
+          </a>
+        </div>
+        <div class="gallery-item design" style="width: calc(25% - 10px); min-width: 150px; position: relative;">
+          <a href="images/img_5.jpg" class="item-wrap fancybox" style="display: block; position: relative;">
+            <span
+              style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 2rem; color: rgba(255,255,255,0.8); z-index: 2;"><i
+                class="fas"></i></span>
+            <img src="/static/images/img_5.jpg" alt="Gallery Image" style="width: 100%; border-radius: 8px; display: block;">
+          </a>
+        </div>
+        <div class="gallery-item design" style="width: calc(25% - 10px); min-width: 150px; position: relative;">
+          <a href="/static/images/img_5.jpg" class="item-wrap fancybox" style="display: block; position: relative;">
+            <span
+              style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 2rem; color: rgba(255,255,255,0.8); z-index: 2;"><i
+                class="fas"></i></span>
+            <img src="/static/images/img_5.jpg" alt="Gallery Image" style="width: 100%; border-radius: 8px; display: block;">
+          </a>
+        </div>
+        <!-- Add more items as needed, assigning appropriate classes -->
+      </div>
+    </div>
+  </section>
+  {% endblock  %}

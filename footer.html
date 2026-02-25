@@ -1,0 +1,149 @@
+ <!-- Contact -->
+      <section class="section" id="contact-section"
+        style="background:#fff; padding:40px 20px; max-width:600px; margin:auto; border-radius:8px;">
+        <h2>Contact Us</h2>
+        <p>Address: 101 Satelite Town, Park View, Islamabad, PK</p>
+        <p>Phone: +92 3455472443</p>
+        <p>Email: aqibaliyaas@gmail.com</p>
+        <form style="margin-top:20px;">
+          <h3>Send us a message</h3>
+          <input type="text" placeholder="Your Name"
+            style="width:100%; margin-bottom:10px; padding:8px; border-radius:4px; border:1px solid #ccc;">
+          <input type="email" placeholder="Your Email"
+            style="width:100%; margin-bottom:10px; padding:8px; border-radius:4px; border:1px solid #ccc;">
+          <textarea placeholder="Message"
+            style="width:100%; height:100px; margin-bottom:10px; padding:8px; border-radius:4px; border:1px solid #ccc;"></textarea>
+          <button class="btn btn-primary" type="submit" style="width:100%;">Send</button>
+        </form>
+      </section>
+ <!-- Footer -->
+      <footer style="background:#222; color:#ccc; padding:30px 20px;">
+        <div style="max-width:1000px; margin:auto; display:flex; flex-wrap:wrap; justify-content:space-between;">
+          <div style="flex:1; min-width:200px; margin-bottom:20px;">
+            <h2 style="color:#fff;">About Us</h2>
+            <p style="color: whitesmoke;">We are dedicated to providing exceptional services and innovative solutions to meet your needs. Our goal
+              is
+              to deliver quality, trust, and excellence in everything we do.</p>
+          </div>
+          <div style="flex:1; min-width:200px; margin-bottom:20px;">
+            <h2 style="color:#fff;">Quick Links</h2>
+            <ul style="list-style:none;">
+              <li><a style="color:#ccc;" href="#about-section">Terms</a></li>
+              <li><a style="color:#ccc;" href="#about-section">Policy</a></li>
+              <li><a style="color:#ccc;" href="#about-section">About Us</a></li>
+            </ul>
+          </div>
+          <div style="flex:1; min-width:200px; margin-bottom:20px;">
+            <h2 style="color:#fff;">Follow Us</h2>
+            <div style="font-size:1.5rem;">
+              <a style="margin-right:10px; color:#ccc;" href="#"><i class="fab fa-facebook"></i></a>
+              <a style="margin-right:10px; color:#ccc;" href="#"><i class="fab fa-twitter"></i></a>
+              <a style="margin-right:10px; color:#ccc;" href="#"><i class="fab fa-instagram"></i></a>
+              <a style="margin-right:10px; color:#ccc;" href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center; margin-top:20px; font-size:0.9rem;">
+          <small>© <span id="year"></span> Softech e Solutions. All rights reserved. Developed By Akibaliyas with
+            &hearts;</small>
+        </div>
+      </footer>
+
+      <!-- Scripts -->
+      <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Toggle nav menu on mobile
+        document.getElementById('menuToggle').addEventListener('click', () => {
+          document.getElementById('navLinks').classList.toggle('show');
+        });
+
+        // Scroll down button
+        document.getElementById('scrollDown').addEventListener('click', () => {
+          document.querySelector('#next').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        //For Gallery
+        document.addEventListener('DOMContentLoaded', function () {
+          const filterButtons = document.querySelectorAll('.filter-btn');
+          const galleryItems = document.querySelectorAll('.gallery-item');
+
+          // Function to clear 'active' class from all buttons
+          function clearActive() {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+          }
+
+          // Function to filter gallery items
+          function filterGallery(filter) {
+            galleryItems.forEach(item => {
+              if (filter === '*' || item.classList.contains(filter.substring(1))) {
+                item.style.display = 'block';
+              } else {
+                item.style.display = 'none';
+              }
+            });
+          }
+
+          // Add click event to each filter button
+          filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+              const filterValue = button.getAttribute('data-filter');
+
+              // Update active button style
+              clearActive();
+              button.classList.add('active');
+
+              // Filter gallery
+              filterGallery(filterValue);
+            });
+          });
+        }); s
+
+        // For How it work sliding
+        document.addEventListener('DOMContentLoaded', function () {
+          const slides = document.querySelectorAll('.slide-image');
+          const totalSlides = slides.length;
+          let currentIndex = 0;
+          let slideInterval = null;
+
+          const showSlide = (index) => {
+            slides.forEach((slide, i) => {
+              slide.style.display = (i === index) ? 'block' : 'none';
+            });
+          };
+
+          const nextSlide = () => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            showSlide(currentIndex);
+          };
+
+          const prevSlide = () => {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            showSlide(currentIndex);
+          };
+
+          // Set up automatic sliding
+          slideInterval = setInterval(nextSlide, 3000); // change slide every 3 seconds
+
+          // Manual navigation
+          document.getElementById('next').addEventListener('click', () => {
+            clearInterval(slideInterval); // stop auto sliding on manual click
+            nextSlide();
+            slideInterval = setInterval(nextSlide, 3000); // restart auto sliding
+          });
+
+          document.getElementById('prev').addEventListener('click', () => {
+            clearInterval(slideInterval);
+            prevSlide();
+            slideInterval = setInterval(nextSlide, 3000);
+          });
+
+          // Initialize first slide
+          showSlide(currentIndex);
+        });
+      </script>
+      <script src="/static/js/abbs.js"></script>
+</body>
+</html>
